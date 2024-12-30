@@ -13,10 +13,11 @@
         <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
         <div id="join-us" class="hidden fixed inset-0 flex items-center justify-center z-50 ">
             <form class="flex flex-col p-6 bg-blue" method="POST" action="{{ route('register') }}">
+                @csrf
                 <h2 class="text-orange-600">Join FoodFusion</h2>
-                <label class="mt-2 mb-1 font-bold text-orange-600" for="first-name">First Name:</label>
+                <label class="mt-2 mb-1 font-bold text-orange-600" for="first_name">First Name:</label>
                 <input class="mb-4 p-4 border border-gray-300 rounded w-full" type="text" id="first-name" name="first-name" placeholder="Enter First Name" required>
-                <label class="mt-2 mb-1 font-bold text-orange-600" for="last-name">Last Name:</label>
+                <label class="mt-2 mb-1 font-bold text-orange-600" for="last_name">Last Name:</label>
                 <input class="mb-4 p-4 border border-gray-300 rounded w-full" type="text" id="last-name" name="last-name" placeholder="Enter Last Name" required>
                 <label class="mt-2 mb-1 font-bold text-orange-600" for="email">Email:</label>
                 <input class="mb-4 p-4 border border-gray-300 rounded w-full" type="email" id="email" name="email" placeholder="Enter Your Email" required>

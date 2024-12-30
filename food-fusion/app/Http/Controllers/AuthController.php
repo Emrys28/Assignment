@@ -11,22 +11,20 @@ use Illuminate\Validation\ValidationException;
 class AuthController extends Controller
 {
     // Show Registration Form
-    public function showRegistrationForm()
-    {
-        return view('auth.register');
-    }
-
     // Handle Registration
     public function register(Request $request)
     {
         $request->validate([
-            'name' => 'required|string|max:255',
+            'first_name' => 'required|string|max:255',
+            'last_name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
             'password' => 'required|string|min:8|confirmed',
         ]);
 
+        $fullName = "{$request->first_name} {$request->last_name}";
+
         User::create([
-            'name' => $request->name,
+            'name' => $fullName,
             'email' => $request->email,
             'password' => Hash::make($request->password),
         ]);

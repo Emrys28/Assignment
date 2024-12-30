@@ -11,19 +11,19 @@
             Join Us
         </button>
         <div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40"></div>
-        <div id="join-us" class="hidden fixed inset-0 flex items-center justify-center z-50">
-            <form class="flex flex-col">
+        <div id="join-us" class="hidden fixed inset-0 flex items-center justify-center z-50 ">
+            <form class="flex flex-col p-6 bg-blue" method="POST" action="{{ route('register') }}">
                 <h2 class="text-orange-600">Join FoodFusion</h2>
                 <label class="mt-2 mb-1 font-bold text-orange-600" for="first-name">First Name:</label>
-                <input class="mb-4 p-2 border border-gray-300 rounded w-full"  type="text" id="first-name" name="first-name" placeholder="Enter First Name" required>
+                <input class="mb-4 p-4 border border-gray-300 rounded w-full" type="text" id="first-name" name="first-name" placeholder="Enter First Name" required>
                 <label class="mt-2 mb-1 font-bold text-orange-600" for="last-name">Last Name:</label>
-                <input class="mb-4 p-2 border border-gray-300 rounded w-full"  type="text" id="last-name" name="last-name" placeholder="Enter Last Name" required>
+                <input class="mb-4 p-4 border border-gray-300 rounded w-full" type="text" id="last-name" name="last-name" placeholder="Enter Last Name" required>
                 <label class="mt-2 mb-1 font-bold text-orange-600" for="email">Email:</label>
-                <input class="mb-4 p-2 border border-gray-300 rounded w-full"  type="email" id="email" name="email" placeholder="Enter Your Email" required>
+                <input class="mb-4 p-4 border border-gray-300 rounded w-full" type="email" id="email" name="email" placeholder="Enter Your Email" required>
                 <label class="mt-2 mb-1 font-bold text-orange-600" for="password">Password:</label>
-                <input class="mb-4 p-2 border border-gray-300 rounded w-full"  type="password" id="password" name="password" placeholder="Type Password" required>
-                <button class="mb-4 hover:bg-orange-700 p-2 border border-gray-300 rounded w-full bg-orange-600 text-white border-0 p-2.5 px-5 cursor-pointer font-bold rounded mt-2 block w-full text-center"  type="submit">Sign Up</button>
-                <button class="mb-4 hover:bg-orange-700 p-2 border border-gray-300 rounded w-full bg-orange-600 text-white border-0 p-2.5 px-5 cursor-pointer font-bold rounded mt-2 block w-full text-center"  type="button" onclick="closePopup()">Close</button>
+                <input class="mb-4 p-4 border border-gray-300 rounded w-full" type="password" id="password" name="password" placeholder="Type Password" required>
+                <button class="mb-4 hover:bg-orange-700 p-2 border border-gray-300 rounded w-full bg-orange-600 text-white border-0 p-2.5 px-5 cursor-pointer font-bold rounded mt-2 block w-full text-center" type="submit">Sign Up</button>
+                <button class="mb-4 hover:bg-orange-700 p-2 border border-gray-300 rounded w-full bg-orange-600 text-white border-0 p-2.5 px-5 cursor-pointer font-bold rounded mt-2 block w-full text-center" type="button" onclick="closePopup()">Close</button>
             </form>
         </div>
     </section>
